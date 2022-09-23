@@ -1,18 +1,15 @@
-import {ReactComponent as Close} from './close.svg'
+import { ReactComponent as Close } from "./close.svg";
+import { ReactComponent as Link } from "./link.svg";
 
+export function ScalableVectorGraphic({ title, classes }) {
+  const svg = {
+    close: <Close />,
+    link: <Link />,
+  };
 
-function SVG({title, classes}) {
-
-    const svg = {
-        close: <Close />,
-    }
-
-    return(<>
-
-    <div className={classes}>
-        {svg[title]}
-    </div>
-
-    </>)
+  return (
+    <>
+      <div className={classes}>{svg[title]}</div>
+    </>
+  );
 }
-export default SVG
